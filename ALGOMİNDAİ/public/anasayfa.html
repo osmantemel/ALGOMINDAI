@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlgomindAI</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(45deg, #3498db, #e74c3c);
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    #welcomeText {
+      font-size: 4em;
+      margin-bottom: 20px;
+      opacity: 0;
+      font-weight: bold;
+      font-style: italic;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    #buttonsContainer {
+      display: flex;
+      gap: 20px;
+      position: fixed;
+      bottom: 20px;
+    }
+
+    .customButton {
+      padding: 15px;
+      font-size: 1.5em;
+      background-color: #fff;
+      color: #3498db;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .customButton:hover {
+      background-color: #3498db;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="welcomeText"></div>
+  <div id="buttonsContainer">
+    <button class="customButton" onclick="girisYap()">Giriş Yap</button>
+    <button class="customButton" onclick="kayitOl()">Kayıt Ol</button>
+  </div>
+
+  <script>
+    const welcomeText = document.getElementById('welcomeText');
+    
+    const welcomeMessage = "AlgoMindAI'ye Hoş Geldiniz";
+    let charIndex = 0;
+
+    function typeWelcomeMessage() {
+      if (charIndex < welcomeMessage.length) {
+        welcomeText.innerHTML += welcomeMessage.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWelcomeMessage, 100);
+      }
+    }
+
+    function girisYap() {
+        window.location.href = 'giris.html';
+    }
+
+    function kayitOl() {
+        window.location.href = 'kayitol.html';
+    }
+
+    setTimeout(() => {
+      welcomeText.style.opacity = 1;
+      typeWelcomeMessage();
+    }, 1000);
+  </script>
+</body>
+</html>

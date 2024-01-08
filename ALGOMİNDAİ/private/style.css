@@ -1,0 +1,46 @@
+ *{
+  overflow: hidden;
+ }
+ 
+ 
+
+  #aramaDiv {
+    position: absolute;
+    bottom: 60px;
+    margin-left: 50%;
+    transform: translate(-50%);
+  
+  }
+
+
+ 
+  /* kart css bas  */
+
+  .like-icon,
+  .favorite-icon {
+   font-size: 25px;
+  }
+
+.like-icon:hover,
+.favorite-icon:hover {
+  color: #e44d4d;
+}
+.hmm{
+  background: linear-gradient(45deg, #000, #fff);
+}
+  /* kart css son  */
+  
+ /* select bas */
+  #kategori {
+    width: 200px;
+    border: 1px solid #ced4da; 
+    border-radius: 4px; 
+    padding: 8px; 
+}
+
+#kategori option:checked {
+    background-color: #007bff; 
+    color: #fff; 
+}
+
+ /* select son */
